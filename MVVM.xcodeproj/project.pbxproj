@@ -10,9 +10,17 @@
 		C2AECA192BE0D4140016177C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AECA182BE0D4140016177C /* AppDelegate.swift */; };
 		C2AECA1B2BE0D4140016177C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AECA1A2BE0D4140016177C /* SceneDelegate.swift */; };
 		C2AECA1D2BE0D4140016177C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AECA1C2BE0D4140016177C /* ViewController.swift */; };
-		C2AECA202BE0D4140016177C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C2AECA1F2BE0D4140016177C /* Base */; };
 		C2AECA222BE0D4160016177C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AECA212BE0D4160016177C /* Assets.xcassets */; };
 		C2AECA252BE0D4160016177C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C2AECA242BE0D4160016177C /* Base */; };
+		C2AECA2E2BE0D4C30016177C /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C2AECA2D2BE0D4C30016177C /* RxBlocking */; };
+		C2AECA302BE0D4C30016177C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C2AECA2F2BE0D4C30016177C /* RxCocoa */; };
+		C2AECA322BE0D4C30016177C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2AECA312BE0D4C30016177C /* RxSwift */; };
+		C2AECA352BE0D4F40016177C /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C2AECA342BE0D4F40016177C /* CombineMoya */; };
+		C2AECA372BE0D4F40016177C /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = C2AECA362BE0D4F40016177C /* Moya */; };
+		C2AECA392BE0D4F40016177C /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C2AECA382BE0D4F40016177C /* RxMoya */; };
+		C2AECA3C2BE0D5630016177C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C2AECA3B2BE0D5630016177C /* Kingfisher */; };
+		C2AECA3E2BE0D78B0016177C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AECA3D2BE0D78B0016177C /* ViewModel.swift */; };
+		C2AECA402BE0D7A50016177C /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AECA3F2BE0D7A50016177C /* CollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,11 @@
 		C2AECA182BE0D4140016177C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2AECA1A2BE0D4140016177C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C2AECA1C2BE0D4140016177C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C2AECA1F2BE0D4140016177C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2AECA212BE0D4160016177C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2AECA242BE0D4160016177C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2AECA262BE0D4160016177C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2AECA3D2BE0D78B0016177C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C2AECA3F2BE0D7A50016177C /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2AECA392BE0D4F40016177C /* RxMoya in Frameworks */,
+				C2AECA322BE0D4C30016177C /* RxSwift in Frameworks */,
+				C2AECA3C2BE0D5630016177C /* Kingfisher in Frameworks */,
+				C2AECA302BE0D4C30016177C /* RxCocoa in Frameworks */,
+				C2AECA352BE0D4F40016177C /* CombineMoya in Frameworks */,
+				C2AECA372BE0D4F40016177C /* Moya in Frameworks */,
+				C2AECA2E2BE0D4C30016177C /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +75,11 @@
 				C2AECA182BE0D4140016177C /* AppDelegate.swift */,
 				C2AECA1A2BE0D4140016177C /* SceneDelegate.swift */,
 				C2AECA1C2BE0D4140016177C /* ViewController.swift */,
-				C2AECA1E2BE0D4140016177C /* Main.storyboard */,
 				C2AECA212BE0D4160016177C /* Assets.xcassets */,
 				C2AECA232BE0D4160016177C /* LaunchScreen.storyboard */,
 				C2AECA262BE0D4160016177C /* Info.plist */,
+				C2AECA3D2BE0D78B0016177C /* ViewModel.swift */,
+				C2AECA3F2BE0D7A50016177C /* CollectionCell.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -83,6 +100,15 @@
 			dependencies = (
 			);
 			name = MVVM;
+			packageProductDependencies = (
+				C2AECA2D2BE0D4C30016177C /* RxBlocking */,
+				C2AECA2F2BE0D4C30016177C /* RxCocoa */,
+				C2AECA312BE0D4C30016177C /* RxSwift */,
+				C2AECA342BE0D4F40016177C /* CombineMoya */,
+				C2AECA362BE0D4F40016177C /* Moya */,
+				C2AECA382BE0D4F40016177C /* RxMoya */,
+				C2AECA3B2BE0D5630016177C /* Kingfisher */,
+			);
 			productName = MVVM;
 			productReference = C2AECA152BE0D4140016177C /* MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +137,11 @@
 				Base,
 			);
 			mainGroup = C2AECA0C2BE0D4130016177C;
+			packageReferences = (
+				C2AECA2C2BE0D4C30016177C /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C2AECA332BE0D4F40016177C /* XCRemoteSwiftPackageReference "Moya" */,
+				C2AECA3A2BE0D5630016177C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C2AECA162BE0D4140016177C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +158,6 @@
 			files = (
 				C2AECA222BE0D4160016177C /* Assets.xcassets in Resources */,
 				C2AECA252BE0D4160016177C /* Base in Resources */,
-				C2AECA202BE0D4140016177C /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +170,15 @@
 			files = (
 				C2AECA1D2BE0D4140016177C /* ViewController.swift in Sources */,
 				C2AECA192BE0D4140016177C /* AppDelegate.swift in Sources */,
+				C2AECA3E2BE0D78B0016177C /* ViewModel.swift in Sources */,
 				C2AECA1B2BE0D4140016177C /* SceneDelegate.swift in Sources */,
+				C2AECA402BE0D7A50016177C /* CollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C2AECA1E2BE0D4140016177C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C2AECA1F2BE0D4140016177C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C2AECA232BE0D4160016177C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +321,6 @@
 				INFOPLIST_FILE = MVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +348,6 @@
 				INFOPLIST_FILE = MVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +385,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2AECA2C2BE0D4C30016177C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.0;
+			};
+		};
+		C2AECA332BE0D4F40016177C /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		C2AECA3A2BE0D5630016177C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2AECA2D2BE0D4C30016177C /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2AECA2C2BE0D4C30016177C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		C2AECA2F2BE0D4C30016177C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2AECA2C2BE0D4C30016177C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C2AECA312BE0D4C30016177C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2AECA2C2BE0D4C30016177C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		C2AECA342BE0D4F40016177C /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2AECA332BE0D4F40016177C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		C2AECA362BE0D4F40016177C /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2AECA332BE0D4F40016177C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		C2AECA382BE0D4F40016177C /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2AECA332BE0D4F40016177C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		C2AECA3B2BE0D5630016177C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2AECA3A2BE0D5630016177C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2AECA0D2BE0D4130016177C /* Project object */;
 }
