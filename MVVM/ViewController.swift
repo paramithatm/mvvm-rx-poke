@@ -5,17 +5,22 @@
 //  Created by Paramitha on 30/04/24.
 //
 
+import Kingfisher
+import Moya
+import RxCocoa
+import RxSwift
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionCell
-        cell.imageView.image = UIImage(systemName: "multiply.circle.fill")
-        cell.titleLabel.text = "Item \(indexPath.row)"
+        cell.imageView.kf.setImage(with: URL(string: data[indexPath.row].image))
+        cell.titleLabel.text = data[indexPath.row].name
         return cell
     }
 
@@ -31,10 +36,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return collection
     }()
 
+    let viewModel = ViewModel()
+    var data = [Pokemon]()
+    
+    let loadTrigger = PublishSubject<Void>()
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupViewModel()
+        setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadTrigger.onNext(())
+    }
+
+    func setupCollectionView() {
         view.backgroundColor = .blue
         collectionView.backgroundColor = .green
         
@@ -52,9 +72,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.register(CollectionCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView.delegate = self
         collectionView.dataSource = self
-        
     }
-
+    
+    func setupViewModel() {
+        let input = ViewModel.Input(loadDataTrigger: loadTrigger.asDriver(onErrorDriveWith: .just(())), loadMoreTrigger: .just(()))
+        let output = viewModel.transform(input: input)
+        
+        output.data.drive(onNext: { pokemon in
+            self.data = pokemon
+            self.collectionView.reloadData()
+        }).disposed(by: disposeBag)
+    }
 
 }
 
