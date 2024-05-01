@@ -77,9 +77,6 @@ extension ObservableType where Element == Response {
             
             do {
                 let value = try response.map(responseType, atKeyPath: atKeyPath, using: JSONDecoder())
-                
-//                print(response)
-//                print(value)
                 return .just(value)
             } catch {
                 // if failed when decoding response

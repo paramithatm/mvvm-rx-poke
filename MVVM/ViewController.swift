@@ -75,13 +75,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func setupViewModel() {
-        let input = ViewModel.Input(loadDataTrigger: loadTrigger.asDriver(onErrorDriveWith: .just(())), loadMoreTrigger: .just(()))
+        let input = ViewModel.Input(loadDataTrigger: loadTrigger.asDriver(onErrorDriveWith: .just(())))
         let output = viewModel.transform(input: input)
         
         output.data.drive(onNext: { pokemon in
             self.data = pokemon
             self.collectionView.reloadData()
         }).disposed(by: disposeBag)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if (indexPath.row == data.count - 1 ) { //it's your last cell
+            loadTrigger.onNext(())
+        }
     }
 
 }

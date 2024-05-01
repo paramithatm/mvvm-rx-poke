@@ -14,7 +14,6 @@ import RxSwift
 class ViewModel {
     struct Input {
         let loadDataTrigger: Driver<Void>
-        let loadMoreTrigger: Driver<Void>
     }
 
     let provider = MoyaProvider<NetworkTarget>()
@@ -26,6 +25,7 @@ class ViewModel {
     
     func transform(input: Input) -> Output {
         let currentOffset = BehaviorRelay<Int>(value: 0)
+        let allData = BehaviorRelay<[Pokemon]>(value: [])
         
         let result = input.loadDataTrigger
             .flatMapLatest { [provider] _ in
@@ -39,15 +39,20 @@ class ViewModel {
         let data = result.compactMap { result in
             if case .success(let success) = result {
                 currentOffset.accept(success.nextOffset)
-//                print("wkwk \(success.results)")
-                return success.results
+                if allData.value.isEmpty {
+                    allData.accept(success.results)
+                } else {
+                    let existing = allData.value
+                    let new = success.results
+                    allData.accept(existing + new)
+                }
+                return allData.value
             }
             else { return [] }
         }
         
         let error = result.compactMap { result in
             if case .failure(let error) = result {
-//                print("wkwk err \(error)")
                 return error.localizedDescription
             }
             else { return "Error occured" }
